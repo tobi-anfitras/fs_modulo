@@ -1,0 +1,6 @@
+{
+  "name": "atividade-fs-json",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Atividade de manipulação de arquivos JSON com Node.js fs/promises"
+}
