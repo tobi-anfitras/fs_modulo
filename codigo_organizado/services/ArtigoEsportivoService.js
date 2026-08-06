@@ -7,17 +7,17 @@ class ArtigoEsportivoService {
         this.repository = repository;
     }
 
-    async listartodos(){
-        return await this.repository.listartodos();
+    async listarTodos(){
+        return await this.repository.listarTodos();
 
     }
     async buscarPorId(id){
-        const artigos = await this.repository.listartodos();
+        const artigos = await this.repository.listarTodos();
         return artigos.find((item) => item.id === Number(id));
     }
 
     async criar(nome,categoria,preco){
-        const artigos = await this.repository.listartodos();
+        const artigos = await this.repository.listarTodos();
 
         const novoId =
             artigos.length > 0 ? artigos[artigos.length - 1].id + 1: 1;
@@ -41,7 +41,7 @@ class ArtigoEsportivoService {
     }
 
     async remover(id){
-        const artigos = await this.repository.listartodos();
+        const artigos = await this.repository.listarTodos();
         const index = artigos.findIndex((item) => item.id === Number(id));
 
         if(index === -1) return false;

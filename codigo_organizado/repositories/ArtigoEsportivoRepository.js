@@ -1,5 +1,5 @@
 //trabalhar o dados (como são armazenados)
-import fs from "fs/peomises"
+import fs from "fs/promises";
 import ArtigoEsportivo from"../models/ArtigoESportivo.js";
 const CAMINHO_ARQUIVO = "./data/ArtigoEsportivo.json";
 
