@@ -4,5 +4,11 @@
     "nome": "bola de futbol",
     "categoria": "Jabulane",
     "preco": 33.33
+  },
+  {
+    "id": 2,
+    "nome": "bola de futbol",
+    "categoria": "Jabulane",
+    "preco": 33.33
   }
 ]

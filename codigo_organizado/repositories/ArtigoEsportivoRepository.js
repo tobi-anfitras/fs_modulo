@@ -9,7 +9,7 @@ class ArtigoEsportivoRepository{
    async listarTodos(){
     try{
         const data = await fs.readFile(CAMINHO_ARQUIVO,"utf-8")
-        const bruto = JSON.perse(data);
+        const bruto = JSON.parse(data);
         return bruto.map(ArtigoEsportivo.fromJSON);
 
     }catch (error){
