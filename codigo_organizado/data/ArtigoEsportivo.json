@@ -1,0 +1,15 @@
+[
+    {
+        "id":1,
+        "nome":"raquete",
+        "categoria":"mão",
+        "preco": 300.0
+    },
+
+    {
+        "id":2,
+        "nome":"bola de futbol",
+        "categoria":"bola",
+        "preco": 33.33
+    }
+]
