@@ -1,29 +1,35 @@
-import ArtigoEsportivoRepository from "./repositories/ArtigoEsportivoRepository.js";
+import ArtigoEsportivoRepository from 
+"./repositores/ArtigoEsportivoRepository.js";
 import ArtigoEsportivoService from "./services/ArtigoEsportivoService.js";
 
-/*ponto de entrada main ()*/
+/*Ponto de entrada main ()*/
+
 const repository = new ArtigoEsportivoRepository();
 const service = new ArtigoEsportivoService(repository);
-console.log("inicializando testes");
+console.log("Iniciando Testes");
 
-//1.lista inicial
+//1. Lista Inicial 
 console.log("Lista Inicial", await service.listarTodos());
 
-//2.criar artigo
-const novoArtigo = await service.criar("bola de futbol","Jabulane",33.33);
-console.log("Artigo Criado", novoArtigo)
+//2. Criar Artigo
+const novoArtigo = await service.criar("Raquete", "wilson" ,38.52);
+console.log("Artigo Criado", novoArtigo);
 
-//3.buscar por id
-const buscar = await service.buscarPorId(2);
-console.log("busca ID", buscar)
+//3. Buscar por ID
+const busca = await service.buscarPorId(2);
+console.log("Busca ID", busca);
 
-//4.atualizar
-const atualizado = await service.atualizar(1,{preco:129.9})
-console.log("artigo 1 atualizado",atualizado)
+//.4 Atualizar 
 
-//5.Remover
-const apagar = await service.remover(3);
-console.log("artigo 3 apagado",apagar)
+const atualizado = await service.atualizar(1, {preco: 129.9});
+console.log("Artigo Atualizado:",atualizado);
 
-//6.lista final
-console.log("Lista final", await service.listarTodos());
+//5. Remover
+
+const removido = await service.remover(3);
+console.log("Removido Id",removido);
+
+//6. Lista Final
+
+console.log("Lista Final", await service.listarTodos());
+
